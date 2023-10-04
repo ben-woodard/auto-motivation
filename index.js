@@ -50,4 +50,6 @@ const getAdvice = () =>{
     advice = `${genIntro()} ${genMid()} and ${genEnd()}`;
     return advice;
 };
+
+//generate random advice
 console.log(getAdvice())
