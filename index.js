@@ -11,7 +11,7 @@ const midSentence = ['run 1 mile', 'drink 2 glasses of water',
 
 const endSentence = ['turn your phone off for 1 hour.', 'write down 10 things you are grateful for.',
     'call a loved one or famly member.', 'read a book for 30 minutes.',
-    'spend an hour doing something you love.', 'write a journal entry for your goals this week.', 
+    'spend an hour doing something you love.', 'write a journal entry for your goals this week.',
     'write down your goals for this month.', 'send a text to someone you miss.'];
 
 
@@ -24,7 +24,7 @@ function genRandNum(num) {
 //nest functions with random idx to pull a statement above arrays. 
 // interpolate together. 
 
-   function getAdvice() {
+function getAdvice() {
     let advice = '';
 
     //generate random index for intro, midsentence, endsentence
@@ -56,4 +56,19 @@ function genRandNum(num) {
 };
 
 //generate random advice
-console.log(getAdvice())
+// console.log(getAdvice());
+
+//  JavaScript for webpage
+
+let clickButton = document.getElementById("pressbutton"); 
+let textBox = document.getElementById("textcontainer");
+
+function changeText() {
+   textBox.innerHTML = getAdvice();
+   this.onclick = null;
+};
+
+clickButton.onclick = changeText;
+
+
+
